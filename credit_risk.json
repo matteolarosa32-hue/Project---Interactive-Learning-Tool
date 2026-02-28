@@ -1,0 +1,49 @@
+[
+    {
+        "type": "mcq",
+        "question_text": "What is credit risk?",
+        "options": [
+            "The risk of a customer not liking a product",
+            "The risk of a borrower failing to repay a loan or meet contractual obligations",
+            "The risk of fluctuations in interest rates",
+            "The risk of operational failures within a bank"
+        ],
+        "correct_answer": "The risk of a borrower failing to repay a loan or meet contractual obligations",
+        "id": "abdd5",
+        "topic": "Credit Risk",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 0,
+            "correct": 0
+        }
+    },
+    {
+        "type": "freeform",
+        "question_text": "Explain the difference between default risk and recovery risk in the context of credit risk.",
+        "options": null,
+        "correct_answer": "Default risk refers to the likelihood that a borrower will fail to meet their financial obligations. Recovery risk, on the other hand, is the risk associated with the amount of money a lender can recover from a borrower after a default has occurred, often through collateral liquidation or legal action.",
+        "id": "53844",
+        "topic": "Credit Risk",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 0,
+            "correct": 0
+        }
+    },
+    {
+        "type": "freeform",
+        "question_text": "Describe how macroeconomic factors, such as a recession, can impact a bank's overall credit risk exposure.",
+        "options": null,
+        "correct_answer": "During a recession, macroeconomic factors like rising unemployment, declining consumer spending, and reduced business profits can significantly increase a bank's credit risk exposure. Higher unemployment makes it harder for individuals to repay personal loans and mortgages, while struggling businesses may default on corporate loans. This leads to an increase in non-performing loans and potential losses for the bank.",
+        "id": "0e9be",
+        "topic": "Credit Risk",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 0,
+            "correct": 0
+        }
+    }
+]

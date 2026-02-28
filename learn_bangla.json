@@ -1,0 +1,210 @@
+[
+    {
+        "type": "mcq",
+        "question_text": "Which Bangla word means \"Thank you\"?",
+        "options": [
+            "Bhalo achi",
+            "Apnar naam ki?",
+            "Dhonnobad",
+            "Jodi"
+        ],
+        "correct_answer": "Dhonnobad",
+        "id": "b2e78",
+        "topic": "Learn Bangla",
+        "is_active": false,
+        "source": "LLM",
+        "stats": {
+            "shown": 4,
+            "correct": 4
+        }
+    },
+    {
+        "type": "mcq",
+        "question_text": "How do you say \"Water\" in Bangla?",
+        "options": [
+            "Dudh",
+            "Cha",
+            "Pani",
+            "Bhaat"
+        ],
+        "correct_answer": "Pani",
+        "id": "ec7e1",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 2,
+            "correct": 2
+        }
+    },
+    {
+        "type": "freeform",
+        "question_text": "Translate the phrase \"How are you?\" into Bangla.",
+        "options": null,
+        "correct_answer": "Kemon achen?",
+        "id": "6609f",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 1,
+            "correct": 1
+        }
+    },
+    {
+        "type": "freeform",
+        "question_text": "Write a simple sentence in Bangla to introduce yourself, stating \"My name is [Your Name]\".",
+        "options": null,
+        "correct_answer": "Amar naam [Your Name].",
+        "id": "84d0a",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 2,
+            "correct": 2
+        }
+    },
+    {
+        "type": "mcq",
+        "question_text": "What is the Bangla word for \"hello\"?",
+        "options": [
+            "Shukriya",
+            "Namaste",
+            "Assalamu Alaikum",
+            "Hello"
+        ],
+        "correct_answer": "Assalamu Alaikum",
+        "id": "ff0e4",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 4,
+            "correct": 4
+        }
+    },
+    {
+        "type": "mcq",
+        "question_text": "How do you say \"Yes\" in Bangla?",
+        "options": [
+            "Na",
+            "Ji",
+            "Khub Bhalo",
+            "Kemon Acho"
+        ],
+        "correct_answer": "Ji",
+        "id": "0dc09",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 1,
+            "correct": 1
+        }
+    },
+    {
+        "type": "mcq",
+        "question_text": "What is the Bangla word for \"one\"?",
+        "options": [
+            "Dui",
+            "Tin",
+            "Ek",
+            "Char"
+        ],
+        "correct_answer": "Ek",
+        "id": "77e8d",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 1,
+            "correct": 1
+        }
+    },
+    {
+        "type": "mcq",
+        "question_text": "Which Bangla word means \"Red\"?",
+        "options": [
+            "Shobuj",
+            "Neel",
+            "Laal",
+            "Holud"
+        ],
+        "correct_answer": "Laal",
+        "id": "d34c8",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 5,
+            "correct": 4
+        }
+    },
+    {
+        "type": "mcq",
+        "question_text": "How do you say \"Goodbye\" in Bangla?",
+        "options": [
+            "Nomoshkar",
+            "Aabar Dekha Hobe",
+            "Goodbye",
+            "Bhalo Acho"
+        ],
+        "correct_answer": "Aabar Dekha Hobe",
+        "id": "30568",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 1,
+            "correct": 1
+        }
+    },
+    {
+        "type": "freeform",
+        "question_text": "Translate the English sentence \"I eat rice\" into Bangla.",
+        "options": null,
+        "correct_answer": "Ami bhaat khai.",
+        "id": "c59ac",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 1,
+            "correct": 1
+        }
+    },
+    {
+        "type": "freeform",
+        "question_text": "What is the Bangla word for \"where\"?",
+        "options": null,
+        "correct_answer": "Kothay",
+        "id": "b3af5",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 4,
+            "correct": 4
+        }
+    },
+    {
+        "type": "mcq",
+        "question_text": "What is the common way to say \"Hello\" in Bangla?",
+        "options": [
+            "Shukriya",
+            "Nomoskar",
+            "Dhonnobad",
+            "Kemon achen"
+        ],
+        "correct_answer": "Assalamaleikum",
+        "id": "52cdb",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 0,
+            "correct": 0
+        }
+    }
+]

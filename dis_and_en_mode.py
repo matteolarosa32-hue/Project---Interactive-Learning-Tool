@@ -34,7 +34,9 @@ class DisableEnableManager:
         for i, t in enumerate(topics, 1):
             print(f"{i}. {t['pretty']}")
         
-        choice = input("\nSelect topic: ")
+        choice = input("\nChoice (or '0' to exit): ")
+        if choice == '0': return
+        
         try:
             topic = topics[int(choice)-1] 
             active_file = topic['filename']

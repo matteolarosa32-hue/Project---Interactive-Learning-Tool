@@ -38,7 +38,7 @@ class DisableEnableManager:
             active_file = topic['filename']
             disabled_file = active_file.replace(".json", "_disabled.json") # We determine the corresponding disabled file name by adding "_disabled" before the .json extension.
             
-            action = input("Do you want to (d)isable an active question or (e)nable a disabled one? Type d or e:").lower()
+            action = input("Do you want to (d)isable an active question or (e)nable a disabled one? Type d or e: ").lower()
             
             if action == 'd':
                 self.handle_toggle(active_file, disabled_file, "disable") 

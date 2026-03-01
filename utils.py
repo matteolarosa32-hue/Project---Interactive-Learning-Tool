@@ -1,11 +1,27 @@
 import os
 
-def get_available_topics(): 
-        files = [f for f in os.listdir('.') if f.endswith('.json') and "_disabled" not in f] # the listdir function gets all the files in the current directory, it is part of the os module.
-        return [
-                {
-                        "pretty": f.replace('.json', '').replace('_', ' ').title(),
-                        "filename": f
-                } 
-                  for f in files
-                ] #the function returns a list of dictionaries, where each one has a user friendly name.
+def get_available_topics():
+    """
+    Centralized function to scan for .json files.
+    Excludes system files and disabled files.
+    """
+    files = os.listdir('.') 
+    
+    # Combined filtering logic
+    json_files = [
+        f for f in files 
+        if f.endswith('.json') 
+        and f != 'disabled_questions.json' 
+        and not f.endswith('_disabled.json')
+        and "_disabled" not in f # Covers both class and main logic
+    ]
+    
+    topics = []
+    for f in json_files:
+        pretty_name = f.replace('.json', '').replace('_', ' ').title()
+        topics.append({
+            "pretty": pretty_name,
+            "filename": f
+        })
+    
+    return topics

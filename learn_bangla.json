@@ -409,19 +409,5 @@
             "shown": 1,
             "correct": 1
         }
-    },
-    {
-        "type": "freeform",
-        "question_text": "How do you say \"I am fine\" in Bangla?",
-        "options": null,
-        "correct_answer": "Ami bhalo achi",
-        "id": "1ba5d",
-        "topic": "Learn Bangla",
-        "is_active": true,
-        "source": "LLM",
-        "stats": {
-            "shown": 0,
-            "correct": 0
-        }
     }
 ]

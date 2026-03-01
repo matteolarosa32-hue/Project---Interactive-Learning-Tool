@@ -5,30 +5,10 @@ from manage_mode import QuestionManager
 from practice_mode import PracticeMode
 from test_mode import TestMode
 from dis_and_en_mode import DisableEnableManager
-
-def get_existing_topics():
-    """Scans the current directory for .json files and returns a list of topics"""
-    files = os.listdir('.')
-    
-    # Filter: Only take .json files, but EXCLUDE system files or disabled question files
-    # This prevents 'disabled_questions.json' or 'topic_disabled.json' from appearing
-    json_files = [
-        f for f in files 
-        if f.endswith('.json') 
-        and f != 'disabled_questions.json' 
-        and not f.endswith('_disabled.json')
-    ]
-    
-    topics = []
-    for f in json_files:
-        name_no_ext = f.replace('.json', '')
-        pretty_name = name_no_ext.replace('_', ' ').title()
-        topics.append(pretty_name)
-    
-    return topics
+from utils import get_available_topics
 
 def main():
-    # Initialize all our specialized managers
+    # Initialize all our classes
     generator = QuestionGenerator()
     stats_viewer = StatsManager()
     manager = QuestionManager()
@@ -41,11 +21,13 @@ def main():
         print("   AI-POWERED LEARNING COMPANION")
         print("="*40)
         
-# --- SHOW EXISTING TOPICS ---
-        existing_topics = get_existing_topics()
+        # --- SHOW EXISTING TOPICS ---
+        topics_data = get_available_topics()
+        # We extract just the 'pretty' names for the print statement
+        pretty_names = [t['pretty'] for t in topics_data]
         
-        if existing_topics:
-            print(f"📂 Existing Topics Found: {', '.join(existing_topics)}")
+        if pretty_names:
+            print(f"📂 Existing Topics Found: {', '.join(pretty_names)}")
         else:
             print("📂 No topics found yet. Start by generating some!")
         

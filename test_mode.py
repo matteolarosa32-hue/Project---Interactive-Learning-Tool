@@ -13,8 +13,8 @@ class TestMode:
 
     def _get_available_topics(self):
         """Returns a list of available JSON topics in the directory"""
-        files = [f for f in os.listdir('.') if f.endswith('.json')]
-        return [{"pretty": f.replace('.json', '').replace('_', ' ').title(), "filename": f} for f in files]
+        files = [f for f in os.listdir('.') if f.endswith('.json') and "_disabled" not in f] # the listdir function gets all the files in the current directory, it is part of the os module.
+        return [{"pretty": f.replace('.json', '').replace('_', ' ').title(), "filename": f} for f in files] #the function returns a list of dictionaries, where each one has a user friendly name.
 
     def _evaluate_freeform(self, question, correct_ref, user_ans):
         """Same logic as Practice Mode: LLM acts as the grader"""
@@ -116,7 +116,9 @@ class TestMode:
         for i, t in enumerate(topics, 1):
             print(f"{i}. {t['pretty']}")
         
-        choice = input("Choice: ")
+        choice = input("\nChoice (or '0' to exit): ")
+        if choice == '0': return
+        
         try:
             idx = int(choice) - 1
             if 0 <= idx < len(topics):

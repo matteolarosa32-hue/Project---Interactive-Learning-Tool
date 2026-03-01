@@ -6,14 +6,9 @@ class QuestionManager:
         # The file path is determined when the user selects a topic
         self.file_path = ""
 
-    def _get_available_topics(self):
-        """Scans the directory for .json files and returns a list of dictionaries"""
-        files = [f for f in os.listdir('.') if f.endswith('.json') and "_disabled" not in f] #important filter to exclude any disabled question files from the management options.
-        topic_list = []
-        for f in files:
-            pretty_name = f.replace('.json', '').replace('_', ' ').title() #returns the list of abvailable topics in a more user-friendly format.
-            topic_list.append({"pretty": pretty_name, "filename": f})
-        return topic_list
+    def _get_available_topics(self): 
+        files = [f for f in os.listdir('.') if f.endswith('.json') and "_disabled" not in f] # the listdir function gets all the files in the current directory, it is part of the os module.
+        return [{"pretty": f.replace('.json', '').replace('_', ' ').title(), "filename": f} for f in files] #the function returns a list of dictionaries, where each one has a user friendly name.
 
     def toggle_question_status(self, questions: list):
         """Allows user to find a question by ID and flip its active status"""

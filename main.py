@@ -1,4 +1,3 @@
-import os
 from generate_mode import QuestionGenerator
 from stats_mode import StatsManager 
 from manage_mode import QuestionManager
@@ -8,10 +7,10 @@ from dis_and_en_mode import DisableEnableManager
 from utils import get_available_topics
 
 def main():
-    # Initialize all our classes
-    generator = QuestionGenerator()
+    # Initialize all our classes 
+    generator = QuestionGenerator() 
     stats_viewer = StatsManager()
-    manager = QuestionManager()
+    manager = QuestionManager() 
     practice = PracticeMode()
     test = TestMode()
     dis_en_manager = DisableEnableManager()

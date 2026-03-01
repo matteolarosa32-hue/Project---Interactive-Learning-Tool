@@ -2,7 +2,7 @@ import json
 import random
 from datetime import datetime
 from generate_mode import LLMClient
-from utils import get_available_topics
+from utils import get_available_topics 
 
 class TestMode: 
     def __init__(self): 
@@ -115,7 +115,7 @@ class TestMode:
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S") #we create a timestamp for when the test was taken.
         log_entry = f"[{timestamp}] Topic: {topic_info['pretty']} | Score: {score}/{num_to_take}\n" #we format the log entry to include the timestamp, topic name, and score in a clear way.
         
-        with open(self.results_file, "a") as f:
+        with open(self.results_file, "a") as f: 
             f.write(log_entry)
         print(f"Result saved to {self.results_file}")
 

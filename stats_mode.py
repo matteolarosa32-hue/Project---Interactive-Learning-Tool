@@ -6,17 +6,9 @@ class StatsManager:
         # We initialize with no path; it gets set when the user picks a topic
         self.file_path = ""
 
-    def _get_available_topics(self):
-        """Scans the directory for .json files and returns a list of dictionaries"""
-        # Look for all json files in the current directory
-        files = [f for f in os.listdir('.') if f.endswith('.json') and "_disabled" not in f] #important filter to exclude any disabled question files from the stats viewing options.
-        
-        topic_list = []
-        for f in files:
-            # Create a pretty name: 'learn_bangla.json' -> 'Learn Bangla'
-            pretty_name = f.replace('.json', '').replace('_', ' ').title()
-            topic_list.append({"pretty": pretty_name, "filename": f})
-        return topic_list
+    def _get_available_topics(self): 
+        files = [f for f in os.listdir('.') if f.endswith('.json') and "_disabled" not in f] # the listdir function gets all the files in the current directory, it is part of the os module.
+        return [{"pretty": f.replace('.json', '').replace('_', ' ').title(), "filename": f} for f in files] #the function returns a list of dictionaries, where each one has a user friendly name.
 
     def display_topic_report(self, topic_info):
         """Reads the specific file and prints the detailed statistics table"""

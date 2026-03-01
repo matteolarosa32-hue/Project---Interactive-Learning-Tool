@@ -1,7 +1,6 @@
 import json
 import os
 import random
-from unittest import result
 from generate_mode import LLMClient
 
 class PracticeMode:

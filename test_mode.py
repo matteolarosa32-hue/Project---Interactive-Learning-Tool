@@ -3,12 +3,11 @@ import os
 import random
 from datetime import datetime
 from generate_mode import LLMClient
-from google.genai import types
 
 class TestMode: 
-    def __init__(self):
-        self.llm = LLMClient()
-        self.file_path = ""
+    def __init__(self): 
+        self.llm = LLMClient() #this initializes the LLM client, allowing us to use it for evaluating freeform answers during the test.
+        self.file_path = "" 
         self.results_file = "results.txt" #This is the file where we will append the test results, including the topic and score.
 
     def _get_available_topics(self):
@@ -82,7 +81,8 @@ class TestMode:
         # Requirement: Chosen randomly without repetition
         test_questions = random.sample(active_pool, num_to_take) 
         
-        score = 0
+        # Initialize the score counter to keep track of how many questions the user answers correctly during the test session.
+        score = 0 
         print(f"\n{'='*30}\nTEST START: {topic_info['pretty']}\n{'='*30}") #header for the test session, showing the topic name and some formatting for emphasis.
 
         for i, q in enumerate(test_questions, 1):
@@ -110,13 +110,13 @@ class TestMode:
             else:
                 print(f"❌ Incorrect. Correct answer: {q['correct_answer']}")
 
-        # Requirement: Display final score
+        # Display final score
         print(f"\n{'='*30}")
         print(f"TEST COMPLETE!")
         print(f"Final Score: {score} out of {num_to_take}")
         print(f"{'='*30}")
 
-        # Requirement: Append to results.txt
+        # Append to results.txt
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S") #we create a timestamp for when the test was taken.
         log_entry = f"[{timestamp}] Topic: {topic_info['pretty']} | Score: {score}/{num_to_take}\n" #we format the log entry to include the timestamp, topic name, and score in a clear way.
         
@@ -145,5 +145,5 @@ class TestMode:
             print("Invalid selection.")
 
 if __name__ == "__main__":
-    tester = TestMode()
+    tester = TestMode() #this creates an instance of the TestMode class, which will allow us to call the run method to start the test mode functionality when this script is executed directly.
     tester.run()

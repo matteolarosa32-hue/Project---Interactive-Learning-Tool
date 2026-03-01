@@ -11,7 +11,7 @@
         "correct_answer": "Dhonnobad",
         "id": "b2e78",
         "topic": "Learn Bangla",
-        "is_active": false,
+        "is_active": true,
         "source": "LLM",
         "stats": {
             "shown": 4,
@@ -30,11 +30,11 @@
         "correct_answer": "Pani",
         "id": "ec7e1",
         "topic": "Learn Bangla",
-        "is_active": false,
+        "is_active": true,
         "source": "LLM",
         "stats": {
-            "shown": 2,
-            "correct": 2
+            "shown": 3,
+            "correct": 3
         }
     },
     {
@@ -288,7 +288,7 @@
         "is_active": true,
         "source": "LLM",
         "stats": {
-            "shown": 0,
+            "shown": 1,
             "correct": 0
         }
     },
@@ -355,6 +355,72 @@
         "source": "LLM",
         "stats": {
             "shown": 1,
+            "correct": 0
+        }
+    },
+    {
+        "type": "mcq",
+        "question_text": "Which of these Bangla words means \"day\"?",
+        "options": [
+            "Raat",
+            "Shokal",
+            "Din",
+            "Sondhya"
+        ],
+        "correct_answer": "Din",
+        "id": "f0c10",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 0,
+            "correct": 0
+        }
+    },
+    {
+        "type": "mcq",
+        "question_text": "What is the Bangla word for \"hand\"?",
+        "options": [
+            "Paa",
+            "Maatha",
+            "Haat",
+            "Chokh"
+        ],
+        "correct_answer": "Haat",
+        "id": "892fa",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 1,
+            "correct": 1
+        }
+    },
+    {
+        "type": "freeform",
+        "question_text": "Translate the English word \"book\" into Bangla.",
+        "options": null,
+        "correct_answer": "Boi",
+        "id": "01d4a",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 1,
+            "correct": 1
+        }
+    },
+    {
+        "type": "freeform",
+        "question_text": "How do you say \"I am fine\" in Bangla?",
+        "options": null,
+        "correct_answer": "Ami bhalo achi",
+        "id": "1ba5d",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 0,
             "correct": 0
         }
     }

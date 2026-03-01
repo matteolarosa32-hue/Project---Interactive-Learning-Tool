@@ -165,7 +165,7 @@
         "is_active": true,
         "source": "LLM",
         "stats": {
-            "shown": 4,
+            "shown": 6,
             "correct": 4
         }
     },
@@ -184,8 +184,8 @@
         "is_active": true,
         "source": "LLM",
         "stats": {
-            "shown": 1,
-            "correct": 1
+            "shown": 2,
+            "correct": 2
         }
     },
     {
@@ -354,7 +354,7 @@
         "is_active": true,
         "source": "LLM",
         "stats": {
-            "shown": 0,
+            "shown": 1,
             "correct": 0
         }
     }

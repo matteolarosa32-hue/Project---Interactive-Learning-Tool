@@ -17,31 +17,47 @@ class TestMode:
         return [{"pretty": f.replace('.json', '').replace('_', ' ').title(), "filename": f} for f in files] #the function returns a list of dictionaries, where each one has a user friendly name.
 
     def _evaluate_freeform(self, question, correct_ref, user_ans):
-        """Same logic as Practice Mode: LLM acts as the grader"""
+        """Asks the LLM to judge a freeform answer"""
+        # If the user input is empty, don't even bother calling the API
+        if not user_ans.strip():
+            return False, "No answer provided."
+
         prompt = (
             f"Question: {question}\n"
             f"Reference Correct Answer: {correct_ref}\n"
             f"User's Answer: {user_ans}\n\n"
             "Is the user's answer conceptually correct? "
-            "Respond ONLY with 'CORRECT' or 'INCORRECT' followed by a brief explanation."
+            "Respond ONLY with 'CORRECT' or 'INCORRECT' followed by a one-sentence explanation."
         )
         try:
+            # We use the existing generate_content method from your LLMClient
             response = self.llm.client.models.generate_content(
                 model=self.llm.model_name,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                temperature=0.0 # 0.0 is best for strict grading
-                )
-            )
-            if response and response.text: #check response actually has text content before trying to process it.
-                result = response.text.upper()
-                is_correct = "CORRECT" in result.split()[0]
-                return is_correct
-            return False
-        except Exception as e:
-            print(f"Error during grading: {e}")
-            return False
+                contents=prompt
+            ) #the generate_content method is used to send the prompt to the LLM and get a response back.
+            
+            if response and response.text: #we check if we got a response and if it has text content.
+                result = response.text.strip()
+               # Extract first word only
+                first_word = result.split()[0].strip(",.:!").upper()
 
+                if first_word == "CORRECT":
+                    is_correct = True
+                elif first_word == "INCORRECT":
+                    is_correct = False
+                else:
+                # If format is unexpected, default to incorrect
+                    is_correct = False
+                
+                return is_correct, response.text.strip() #we return a tuple with the boolean indicating correctness and the full response
+            
+            # Fallback if response.text is empty to prevent unpacking errors
+            return False, "No response from LLM."
+
+        except Exception as e:
+            print(f"Error evaluating answer: {e}")
+            return False, "Evaluation failed."
+                
     def run_test(self, topic_info):
         self.file_path = topic_info['filename'] #Set the file path based on the user's topic selection. This allows us to load the correct set of questions for the test.
         with open(self.file_path, "r") as f:
@@ -84,7 +100,9 @@ class TestMode:
             else:
                 ans = input("Your answer: ").strip()
                 print("Grading...")
-                is_correct = self._evaluate_freeform(q['question_text'], q['correct_answer'], ans)
+                # FIXED: Unpacking the tuple (boolean, string) to prevent the "always True" tuple bug
+                is_correct, feedback = self._evaluate_freeform(q['question_text'], q['correct_answer'], ans)
+                print(f"Result: {feedback}")
 
             if is_correct:
                 print("✅ Correct!")

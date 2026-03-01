@@ -1,1 +1,21 @@
-[]
+[
+    {
+        "type": "mcq",
+        "question_text": "What is the Bangla word for \"hello\"?",
+        "options": [
+            "Shukriya",
+            "Namaste",
+            "Assalamu Alaikum",
+            "Hello"
+        ],
+        "correct_answer": "Assalamu Alaikum",
+        "id": "ff0e4",
+        "topic": "Learn Bangla",
+        "is_active": false,
+        "source": "LLM",
+        "stats": {
+            "shown": 4,
+            "correct": 4
+        }
+    }
+]

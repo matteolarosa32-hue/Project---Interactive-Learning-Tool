@@ -1,0 +1,73 @@
+[
+    {
+        "type": "mcq",
+        "question_text": "Which of the following sentences uses the present perfect tense correctly?",
+        "options": [
+            "I am eating breakfast.",
+            "She will go to the store.",
+            "They have finished their homework.",
+            "He went home yesterday."
+        ],
+        "correct_answer": "They have finished their homework.",
+        "id": "24f57",
+        "topic": "Learn English",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 0,
+            "correct": 0
+        }
+    },
+    {
+        "type": "mcq",
+        "question_text": "What does the phrasal verb 'to look up to someone' mean?",
+        "options": [
+            "To search for someone",
+            "To admire someone",
+            "To stare at someone",
+            "To find someone from above"
+        ],
+        "correct_answer": "To admire someone",
+        "id": "a0fd0",
+        "topic": "Learn English",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 0,
+            "correct": 0
+        }
+    },
+    {
+        "type": "mcq",
+        "question_text": "Complete the blank with the correct article: 'She is ___ honest person.'",
+        "options": [
+            "a",
+            "an",
+            "the",
+            "no article"
+        ],
+        "correct_answer": "an",
+        "id": "9ce7d",
+        "topic": "Learn English",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 0,
+            "correct": 0
+        }
+    },
+    {
+        "type": "freeform",
+        "question_text": "Rewrite the following sentence in the passive voice: 'The students cleaned the classroom.'",
+        "options": null,
+        "correct_answer": "The classroom was cleaned by the students.",
+        "id": "e5777",
+        "topic": "Learn English",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 0,
+            "correct": 0
+        }
+    }
+]

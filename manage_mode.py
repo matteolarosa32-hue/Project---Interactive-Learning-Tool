@@ -1,14 +1,11 @@
 import json
 import os
+from utils import get_available_topics
 
 class QuestionManager:
     def __init__(self):
         # The file path is determined when the user selects a topic
         self.file_path = ""
-
-    def _get_available_topics(self): 
-        files = [f for f in os.listdir('.') if f.endswith('.json') and "_disabled" not in f] # the listdir function gets all the files in the current directory, it is part of the os module.
-        return [{"pretty": f.replace('.json', '').replace('_', ' ').title(), "filename": f} for f in files] #the function returns a list of dictionaries, where each one has a user friendly name.
 
     def toggle_question_status(self, questions: list):
         """Allows user to find a question by ID and flip its active status"""
@@ -83,7 +80,7 @@ class QuestionManager:
 
     def run(self):
         """Main interaction flow for Management Mode"""
-        topics = self._get_available_topics()
+        topics = get_available_topics()
         if not topics:
             print("\nNo topics found.")
             return

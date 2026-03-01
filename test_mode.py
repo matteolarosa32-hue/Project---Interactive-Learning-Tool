@@ -1,19 +1,14 @@
 import json
-import os
 import random
 from datetime import datetime
 from generate_mode import LLMClient
+from utils import get_available_topics
 
 class TestMode: 
     def __init__(self): 
         self.llm = LLMClient() #this initializes the LLM client, allowing us to use it for evaluating freeform answers during the test.
         self.file_path = "" 
         self.results_file = "results.txt" #This is the file where we will append the test results, including the topic and score.
-
-    def _get_available_topics(self):
-        """Returns a list of available JSON topics in the directory"""
-        files = [f for f in os.listdir('.') if f.endswith('.json') and "_disabled" not in f] # the listdir function gets all the files in the current directory, it is part of the os module.
-        return [{"pretty": f.replace('.json', '').replace('_', ' ').title(), "filename": f} for f in files] #the function returns a list of dictionaries, where each one has a user friendly name.
 
     def _evaluate_freeform(self, question, correct_ref, user_ans):
         """Asks the LLM to judge a freeform answer"""
@@ -125,7 +120,7 @@ class TestMode:
         print(f"Result saved to {self.results_file}")
 
     def run(self):
-        topics = self._get_available_topics()
+        topics = get_available_topics()
         if not topics:
             print("No topics found. Generate some questions first!")
             return

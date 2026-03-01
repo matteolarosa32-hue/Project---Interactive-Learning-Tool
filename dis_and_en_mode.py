@@ -1,15 +1,11 @@
 import json
 import os
+from utils import get_available_topics
 
 class DisableEnableManager:
     def __init__(self):
         # We don't need the LLM for this mode, just file management
         pass
-
-    def _get_available_topics(self):
-        """Finds all topic files. We ignore the '_disabled' files in the main list."""
-        files = [f for f in os.listdir('.') if f.endswith('.json') and "_disabled" not in f]
-        return [{"pretty": f.replace('.json', '').replace('_', ' ').title(), "filename": f} for f in files]
 
     def _load_json(self, filename):
         if not os.path.exists(filename): # If the file doesn't exist, we return an empty list to avoid errors.
@@ -25,7 +21,7 @@ class DisableEnableManager:
             json.dump(data, f, indent=4)
 
     def run(self):
-        topics = self._get_available_topics()
+        topics = get_available_topics()
         if not topics:
             print("No topics found.")
             return

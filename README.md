@@ -39,6 +39,7 @@ This tool supports both:
 project/
 ├── .env                    # Environment variables (Private API Key)
 ├── .gitignore              # Defines files to be ignored by Git (e.g., .env, pycache)
+├── utils.py                # Group the repeated functions, mainly the one to list available topics
 ├── main.py                 # Application entry point
 ├── generate_mode.py        # AI question generation logic
 ├── stats_mode.py           # Performance tracking and math

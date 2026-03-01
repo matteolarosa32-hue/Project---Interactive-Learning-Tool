@@ -1,16 +1,12 @@
 import json
-import os
 import random
 from generate_mode import LLMClient
+from utils import get_available_topics
 
 class PracticeMode:
     def __init__(self): # We initialize the LLM client and set up a placeholder for the file path that will be determined when the user selects a topic.
         self.llm = LLMClient()
         self.file_path = ""
-
-    def _get_available_topics(self): 
-        files = [f for f in os.listdir('.') if f.endswith('.json') and "_disabled" not in f] # the listdir function gets all the files in the current directory, it is part of the os module.
-        return [{"pretty": f.replace('.json', '').replace('_', ' ').title(), "filename": f} for f in files] #the function returns a list of dictionaries, where each one has a user friendly name.
 
     def _calculate_weight(self, q):
         """Strategic Weight: Higher weight = higher chance of being picked"""
@@ -127,7 +123,7 @@ class PracticeMode:
             self._save_stats(all_questions)
 
     def run(self): #set the stage for the run session.
-        topics = self._get_available_topics() 
+        topics = get_available_topics() 
         if not topics: return
         print("\n--- SELECT TOPIC TO PRACTICE ---")
         for i, t in enumerate(topics):

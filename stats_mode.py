@@ -1,14 +1,11 @@
 import json
 import os
+from utils import get_available_topics
 
 class StatsManager:
     def __init__(self):
         # We initialize with no path; it gets set when the user picks a topic
         self.file_path = ""
-
-    def _get_available_topics(self): 
-        files = [f for f in os.listdir('.') if f.endswith('.json') and "_disabled" not in f] # the listdir function gets all the files in the current directory, it is part of the os module.
-        return [{"pretty": f.replace('.json', '').replace('_', ' ').title(), "filename": f} for f in files] #the function returns a list of dictionaries, where each one has a user friendly name.
 
     def display_topic_report(self, topic_info):
         """Reads the specific file and prints the detailed statistics table"""
@@ -62,7 +59,7 @@ class StatsManager:
     # --- RESTORED RUN METHOD ---
     def run(self):
         """Main interaction flow for viewing statistics"""
-        topics = self._get_available_topics()
+        topics = get_available_topics()
 
         if not topics:
             print("\n📂 No question files found. Please generate some questions first!")

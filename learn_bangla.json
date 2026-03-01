@@ -176,16 +176,121 @@
             "Shukriya",
             "Nomoskar",
             "Dhonnobad",
-            "Kemon achen"
+            "Assalamaileikum"
         ],
-        "correct_answer": "Assalamaleikum",
+        "correct_answer": "Assalamaileikum",
         "id": "52cdb",
         "topic": "Learn Bangla",
         "is_active": true,
         "source": "LLM",
         "stats": {
             "shown": 1,
+            "correct": 1
+        }
+    },
+    {
+        "type": "mcq",
+        "question_text": "What is the Bangla word for \"two\"?",
+        "options": [
+            "ek",
+            "dui",
+            "tin",
+            "char"
+        ],
+        "correct_answer": "dui",
+        "id": "31165",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 0,
+            "correct": 0
+        }
+    },
+    {
+        "type": "mcq",
+        "question_text": "Which of these Bangla words means \"blue\"?",
+        "options": [
+            "shobuj",
+            "neel",
+            "holud",
+            "shada"
+        ],
+        "correct_answer": "neel",
+        "id": "0fcbc",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 0,
+            "correct": 0
+        }
+    },
+    {
+        "type": "mcq",
+        "question_text": "How do you say \"Mother\" in Bangla?",
+        "options": [
+            "baba",
+            "maa",
+            "bhai",
+            "bon"
+        ],
+        "correct_answer": "maa",
+        "id": "48834",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 0,
+            "correct": 0
+        }
+    },
+    {
+        "type": "mcq",
+        "question_text": "What is the correct way to say \"Good morning\" in Bangla?",
+        "options": [
+            "Shubho ratri",
+            "Shubho shondha",
+            "Shubho shokal",
+            "Shubho dupur"
+        ],
+        "correct_answer": "Shubho shokal",
+        "id": "4001b",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 0,
+            "correct": 0
+        }
+    },
+    {
+        "type": "freeform",
+        "question_text": "Translate the English phrase \"I want to learn\" into Bangla.",
+        "options": null,
+        "correct_answer": "Ami shikte chai",
+        "id": "219d8",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 0,
+            "correct": 0
+        }
+    },
+    {
+        "type": "freeform",
+        "question_text": "What is the Bangla word for \"father\"?",
+        "options": null,
+        "correct_answer": "Baba",
+        "id": "c6b85",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 0,
             "correct": 0
         }
     }
+
 ]

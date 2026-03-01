@@ -61,9 +61,9 @@ class LLMClient:
                 model=self.model_name,
                 contents=prompt,
                 config=types.GenerateContentConfig(
-                    response_mime_type='application/json',
-                    response_schema=QuestionList,
-                    temperature=0.9
+                response_mime_type='application/json',
+                response_schema=QuestionList,
+                temperature=0.9
                 ) #temperature is a parameter that controls the creativity of the LLM's responses. A higher value like 0.9 encourages more diverse and creative outputs.
             )
             

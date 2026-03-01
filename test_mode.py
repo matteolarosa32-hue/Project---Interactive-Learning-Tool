@@ -30,7 +30,7 @@ class TestMode:
                 model=self.llm.model_name,
                 contents=prompt,
                 config=types.GenerateContentConfig(
-                    temperature=0.0 # 0.0 is best for strict grading
+                temperature=0.0 # 0.0 is best for strict grading
                 )
             )
             if response and response.text: #check response actually has text content before trying to process it.

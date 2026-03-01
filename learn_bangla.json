@@ -80,8 +80,8 @@
         "is_active": true,
         "source": "LLM",
         "stats": {
-            "shown": 1,
-            "correct": 1
+            "shown": 2,
+            "correct": 2
         }
     },
     {
@@ -203,8 +203,8 @@
         "is_active": true,
         "source": "LLM",
         "stats": {
-            "shown": 0,
-            "correct": 0
+            "shown": 1,
+            "correct": 1
         }
     },
     {
@@ -222,7 +222,7 @@
         "is_active": true,
         "source": "LLM",
         "stats": {
-            "shown": 0,
+            "shown": 2,
             "correct": 0
         }
     },
@@ -241,8 +241,8 @@
         "is_active": true,
         "source": "LLM",
         "stats": {
-            "shown": 0,
-            "correct": 0
+            "shown": 1,
+            "correct": 1
         }
     },
     {
@@ -260,8 +260,8 @@
         "is_active": true,
         "source": "LLM",
         "stats": {
-            "shown": 0,
-            "correct": 0
+            "shown": 1,
+            "correct": 1
         }
     },
     {
@@ -291,6 +291,71 @@
             "shown": 0,
             "correct": 0
         }
+    },
+    {
+        "type": "mcq",
+        "question_text": "Which of these is the Bangla word for \"three\"?",
+        "options": [
+            "Ek",
+            "Dui",
+            "Teen",
+            "Char"
+        ],
+        "correct_answer": "Teen",
+        "id": "4c143",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 1,
+            "correct": 1
+        }
+    },
+    {
+        "type": "mcq",
+        "question_text": "What is the Bangla phrase for \"Please come in\"?",
+        "options": [
+            "Dhonnobad",
+            "Apni kemon achen",
+            "Bhetore ashun",
+            "Shubho shokal"
+        ],
+        "correct_answer": "Bhetore ashun",
+        "id": "06914",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 1,
+            "correct": 1
+        }
+    },
+    {
+        "type": "freeform",
+        "question_text": "Translate the English sentence \"I like to read\" into Bangla.",
+        "options": null,
+        "correct_answer": "Ami porte bhalobashi",
+        "id": "37957",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 1,
+            "correct": 1
+        }
+    },
+    {
+        "type": "freeform",
+        "question_text": "What is the Bangla word for \"apple\"?",
+        "options": null,
+        "correct_answer": "Apel",
+        "id": "26745",
+        "topic": "Learn Bangla",
+        "is_active": true,
+        "source": "LLM",
+        "stats": {
+            "shown": 0,
+            "correct": 0
+        }
     }
-
 ]

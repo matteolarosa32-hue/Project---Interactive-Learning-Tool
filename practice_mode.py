@@ -1,6 +1,7 @@
 import json
 import os
 import random
+from unittest import result
 from generate_mode import LLMClient
 
 class PracticeMode:
@@ -41,12 +42,26 @@ class PracticeMode:
                 model=self.llm.model_name,
                 contents=prompt
             ) #the generate_content method is used to send the prompt to the LLM and get a response back.
+            
             if response and response.text: #we check if we got a response and if it has text content.
-                result = response.text.upper()
-                is_correct = "CORRECT" in result.split()[0] # Check first word
-                return is_correct, response.text
-            else:
-                return False, "No response from LLM."
+                result = response.text.strip().upper()
+                
+                # Check for INCORRECT first because 'CORRECT' is a substring of 'INCORRECT'
+                if result.startswith("INCORRECT"):
+                    is_correct = False
+                elif result.startswith("CORRECT"):
+                    is_correct = True
+                else:
+                    # Fallback: look for the word specifically using split
+                    words = result.split()
+                    first_word = words[0].strip(',.:') if words else ""
+                    is_correct = (first_word == "CORRECT")
+                
+                return is_correct, response.text.strip() #we return a tuple with the boolean indicating correctness and the full response from the LLM for feedback.
+            
+            # Fallback if response.text is empty to prevent "None is not iterable" error
+            return False, "No response from LLM."
+
         except Exception as e:
             print(f"Error evaluating answer: {e}")
             return False, "Evaluation failed."
